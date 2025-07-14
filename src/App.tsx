@@ -42,14 +42,11 @@ function App() {
     }
   }, [location]);
 
-
-  
-
   const checkIfAtWorkLocation = (lat: number, lng: number): boolean => {
-  
+  // Set these to your actual current latitude and longitude
   const workLat = 30.2708;
   const workLng = 78.0036;
-  const threshold = 0.01; 
+  const threshold = 0.01; // ~1km radius
 
   const distance = Math.sqrt(
     Math.pow(lat - workLat, 2) + Math.pow(lng - workLng, 2)
